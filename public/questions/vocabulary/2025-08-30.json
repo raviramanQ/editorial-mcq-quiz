@@ -1,0 +1,380 @@
+{
+    "date": "2025-08-30",
+    "title": "Vocabulary Practice - 1 green notebook",
+    "description": "MCQ practice for difficult English words discussed in this chat flow",
+    "questions": [
+      {
+        "id": 1,
+        "question": "What does 'Suspicion' mean?",
+        "options": [
+          "A strong belief in something",
+          "Doubt or mistrust",
+          "Proof of honesty",
+          "A confirmed truth"
+        ],
+        "correctAnswer": "B",
+        "explanation": "'Suspicion' means doubt or lack of trust."
+      },
+      {
+        "id": 2,
+        "question": "What does 'Curbing' mean?",
+        "options": [
+          "Encouraging something",
+          "Controlling or limiting something",
+          "Ignoring a problem",
+          "Expanding something quickly"
+        ],
+        "correctAnswer": "B",
+        "explanation": "'Curbing' means to control or restrict something unwanted."
+      },
+      {
+        "id": 3,
+        "question": "What does 'Seizure' mean?",
+        "options": [
+          "An act of giving",
+          "The action of taking something by force or legal authority",
+          "Permission to use something",
+          "The act of forgiving"
+        ],
+        "correctAnswer": "B",
+        "explanation": "'Seizure' means taking something by force or authority."
+      },
+      {
+        "id": 4,
+        "question": "What does 'Legitimate' mean?",
+        "options": [
+          "Not allowed by law",
+          "Fake and unreal",
+          "Allowed by law; reasonable and acceptable",
+          "Suspicious and doubtful"
+        ],
+        "correctAnswer": "C",
+        "explanation": "'Legitimate' means lawful, proper, and acceptable."
+      },
+      {
+        "id": 5,
+        "question": "What does 'Tortuous' mean?",
+        "options": [
+          "Straight and clear",
+          "Full of twists and turns; not direct",
+          "Easy and smooth",
+          "Quick and simple"
+        ],
+        "correctAnswer": "B",
+        "explanation": "'Tortuous' means full of bends and complicated turns."
+      },
+      {
+        "id": 6,
+        "question": "What does 'Rampant' mean?",
+        "options": [
+          "Under control",
+          "Spreading fast, usually in a bad way",
+          "Rare and uncommon",
+          "Silent and hidden"
+        ],
+        "correctAnswer": "B",
+        "explanation": "'Rampant' means something bad increasing quickly and uncontrollably."
+      },
+      {
+        "id": 7,
+        "question": "What does 'Deter' mean?",
+        "options": [
+          "To encourage strongly",
+          "To stop or discourage someone from doing something",
+          "To guide with advice",
+          "To ignore warnings"
+        ],
+        "correctAnswer": "B",
+        "explanation": "'Deter' means to discourage or stop someone from doing something."
+      },
+      {
+        "id": 8,
+        "question": "What does 'Grope' mean?",
+        "options": [
+          "To search blindly with hands",
+          "To write quickly",
+          "To explain clearly",
+          "To move confidently"
+        ],
+        "correctAnswer": "A",
+        "explanation": "'Grope' means searching with hands in the dark or blindly."
+      },
+      {
+        "id": 9,
+        "question": "What does 'Outrage' mean?",
+        "options": [
+          "Calm satisfaction",
+          "Strong anger and shock",
+          "Happy excitement",
+          "Polite disagreement"
+        ],
+        "correctAnswer": "B",
+        "explanation": "'Outrage' means extreme anger and shock at something wrong."
+      },
+      {
+        "id": 10,
+        "question": "What does 'Haunt' mean?",
+        "options": [
+          "To give peace of mind",
+          "To repeatedly cause suffering, fear, or anxiety",
+          "To entertain happily",
+          "To disappear quickly"
+        ],
+        "correctAnswer": "B",
+        "explanation": "'Haunt' means to trouble someone’s mind again and again."
+      },
+      {
+        "id": 11,
+        "question": "What does 'Agonising' mean?",
+        "options": [
+          "Causing great worry, pain, or difficulty",
+          "Very relaxing",
+          "Quick and easy",
+          "Normal and casual"
+        ],
+        "correctAnswer": "A",
+        "explanation": "'Agonising' means extremely painful or worrying."
+      },
+      {
+        "id": 12,
+        "question": "What does 'Ham-handed' mean?",
+        "options": [
+          "Skilled and smooth",
+          "Awkward or clumsy in action",
+          "Quick and efficient",
+          "Calm and quiet"
+        ],
+        "correctAnswer": "B",
+        "explanation": "'Ham-handed' means unskilled or clumsy handling of things."
+      },
+      {
+        "id": 13,
+        "question": "What does 'Proximity' mean?",
+        "options": [
+          "The state of being near",
+          "Being far away",
+          "Extreme difference",
+          "Something hidden"
+        ],
+        "correctAnswer": "A",
+        "explanation": "'Proximity' means nearness in space or time."
+      },
+      {
+        "id": 14,
+        "question": "What does 'Logistics' mean?",
+        "options": [
+          "Simple planning",
+          "Careful organization of a complicated task",
+          "Random movement",
+          "An easy arrangement"
+        ],
+        "correctAnswer": "B",
+        "explanation": "'Logistics' means planning and managing complex tasks or operations."
+      },
+      {
+        "id": 15,
+        "question": "What does 'Predates' mean?",
+        "options": [
+          "To happen earlier than something else",
+          "To follow after",
+          "To happen at the same time",
+          "To ignore in history"
+        ],
+        "correctAnswer": "A",
+        "explanation": "'Predates' means something existed or happened before another."
+      },
+      {
+        "id": 16,
+        "question": "What does 'Wont' mean?",
+        "options": [
+          "In the habit of doing something",
+          "Something unusual",
+          "Something forbidden",
+          "A sudden surprise"
+        ],
+        "correctAnswer": "A",
+        "explanation": "'Wont' means accustomed or in the habit of doing something."
+      },
+      {
+        "id": 17,
+        "question": "What does 'Nefarious' mean?",
+        "options": [
+          "Good and kind",
+          "Wicked or criminal",
+          "Ordinary and boring",
+          "Safe and secure"
+        ],
+        "correctAnswer": "B",
+        "explanation": "'Nefarious' means evil or criminal in nature."
+      },
+      {
+        "id": 18,
+        "question": "What does 'Spirit' mean?",
+        "options": [
+          "Way of thinking; energy; courage",
+          "Fear and weakness",
+          "Physical body only",
+          "Calm and silence"
+        ],
+        "correctAnswer": "A",
+        "explanation": "'Spirit' means enthusiasm, courage, or way of thinking."
+      },
+      {
+        "id": 19,
+        "question": "What does 'Prospect' mean?",
+        "options": [
+          "Possibility of something good in future",
+          "A fixed result",
+          "A problem or danger",
+          "A sure failure"
+        ],
+        "correctAnswer": "A",
+        "explanation": "'Prospect' means possibility or chance of success in future."
+      },
+      {
+        "id": 20,
+        "question": "What does 'Commodities' mean?",
+        "options": [
+          "Products that can be bought or sold",
+          "Ideas and thoughts",
+          "Emotions",
+          "A person’s habits"
+        ],
+        "correctAnswer": "A",
+        "explanation": "'Commodities' are goods or products for trade."
+      },
+      {
+        "id": 21,
+        "question": "What does 'Compliance' mean?",
+        "options": [
+          "Refusing rules",
+          "Breaking laws",
+          "Following rules or standards",
+          "Ignoring instructions"
+        ],
+        "correctAnswer": "C",
+        "explanation": "'Compliance' means obeying laws, rules, or standards."
+      },
+      {
+        "id": 22,
+        "question": "What does 'Hinge' mean?",
+        "options": [
+          "To depend on something",
+          "To move around",
+          "To break apart",
+          "To reject strongly"
+        ],
+        "correctAnswer": "A",
+        "explanation": "'Hinge' means depend on something for success or result."
+      },
+      {
+        "id": 23,
+        "question": "What does 'Monetisation' mean?",
+        "options": [
+          "Spending money freely",
+          "Changing something into money or income",
+          "Borrowing money",
+          "Losing money"
+        ],
+        "correctAnswer": "B",
+        "explanation": "'Monetisation' means turning something into money or profit."
+      },
+      {
+        "id": 24,
+        "question": "What does 'Bolster' mean?",
+        "options": [
+          "To weaken",
+          "To support or strengthen",
+          "To replace completely",
+          "To remove"
+        ],
+        "correctAnswer": "B",
+        "explanation": "'Bolster' means to support or make stronger."
+      },
+      {
+        "id": 25,
+        "question": "What does 'Outlook' mean?",
+        "options": [
+          "Future situation or expectation",
+          "A present problem",
+          "Past events",
+          "Hidden secret"
+        ],
+        "correctAnswer": "A",
+        "explanation": "'Outlook' means prediction or view about the future."
+      },
+      {
+        "id": 26,
+        "question": "What does 'Explore' mean?",
+        "options": [
+          "To search and discover",
+          "To hide away",
+          "To avoid something",
+          "To destroy completely"
+        ],
+        "correctAnswer": "A",
+        "explanation": "'Explore' means to search and find out about something."
+      },
+      {
+        "id": 27,
+        "question": "What does 'Opine' mean?",
+        "options": [
+          "To express an opinion",
+          "To remain silent",
+          "To follow orders",
+          "To ask questions"
+        ],
+        "correctAnswer": "A",
+        "explanation": "'Opine' means to give one’s opinion."
+      },
+      {
+        "id": 28,
+        "question": "What does 'Lacuna' mean?",
+        "options": [
+          "A missing or absent part",
+          "A complete explanation",
+          "A strong wall",
+          "A large opportunity"
+        ],
+        "correctAnswer": "A",
+        "explanation": "'Lacuna' means a gap or missing part in something."
+      },
+      {
+        "id": 29,
+        "question": "What does 'Outcry' mean?",
+        "options": [
+          "Public anger and disapproval",
+          "Joyful celebration",
+          "Silent agreement",
+          "Personal complaint only"
+        ],
+        "correctAnswer": "A",
+        "explanation": "'Outcry' means loud public protest or anger."
+      },
+      {
+        "id": 30,
+        "question": "What does 'Sacrosanct' mean?",
+        "options": [
+          "Too important to be changed or questioned",
+          "Easy to replace",
+          "Not important",
+          "Uncertain or doubtful"
+        ],
+        "correctAnswer": "A",
+        "explanation": "'Sacrosanct' means extremely important and protected from change."
+      },
+      {
+        "id": 31,
+        "question": "What does 'Norms' mean?",
+        "options": [
+          "Standards or rules expected by society",
+          "Unusual habits",
+          "Special powers",
+          "Rare exceptions"
+        ],
+        "correctAnswer": "A",
+        "explanation": "'Norms' means agreed standards, rules, or expected behavior."
+      }
+    ]
+  }
+  

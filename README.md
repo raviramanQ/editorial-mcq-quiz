@@ -1,70 +1,104 @@
-# Getting Started with Create React App
+# Editorial Vocabulary Practice App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A React-based vocabulary practice application that loads vocabulary words from newspaper editorials organized by date. Perfect for improving English vocabulary from The Hindu and Indian Express editorials with a 20-second timer per question.
+
+## Features
+
+- **Vocabulary MCQ Questions**: Loaded from local JSON files organized by date
+- **Timer Functionality**: 20-second countdown timer per question
+- **Interactive UI**: Modern, responsive design with smooth animations
+- **Progress Tracking**: Visual progress bar and question indicators
+- **Detailed Results**: Score breakdown with explanations for each answer
+- **Weekly Organization**: Select vocabulary sets by date for weekly revision
+
+## Setup Instructions
+
+### Prerequisites
+- Node.js (v14 or higher)
+- npm or yarn
+
+### Installation
+
+1. **Clone or navigate to the project directory**
+   ```bash
+   cd editorial-mcq-quiz
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Start the development server**
+   ```bash
+   npm start
+   ```
+
+4. **Open the app**
+   - Navigate to [http://localhost:3000](http://localhost:3000)
+   - Select a date to load your weekly vocabulary set
+
+## How to Use
+
+1. **Select Date**: Choose a vocabulary set from your weekly reading
+2. **Answer Questions**: Click on your preferred answer (A, B, C, or D)
+3. **Monitor Time**: Each question has 20 seconds - auto-advances when time runs out
+4. **Navigate**: Use Previous/Next buttons or click question numbers
+5. **Complete Practice**: Finish all vocabulary words
+6. **Review Results**: See your score and detailed explanations
+
+## Project Structure
+
+```
+src/
+├── components/
+│   ├── Quiz.js          # Main quiz component
+│   └── Quiz.css         # Quiz styling
+├── services/
+│   └── questionService.js # Local JSON file service
+├── App.js               # Main app component
+└── App.css              # Global styles
+```
+
+## Technologies Used
+
+- **React**: Frontend framework
+- **Local JSON Files**: Question storage and retrieval
+- **CSS3**: Modern styling with animations
+- **JavaScript ES6+**: Modern JavaScript features
+
+## API Integration
+
+The app loads vocabulary words from local JSON files organized by date. Each file contains vocabulary from newspaper editorials covering:
+
+- Advanced vocabulary from editorials
+- Political and economic terms
+- Legal and social terminology
+- Academic and formal language
+- Context-based word meanings
+- And more!
 
 ## Available Scripts
 
-In the project directory, you can run:
-
 ### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Runs the app in development mode at [http://localhost:3000](http://localhost:3000)
 
 ### `npm run build`
+Builds the app for production to the `build` folder
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### `npm test`
+Launches the test runner
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Adding Your Own Questions
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+See `QUESTION_FORMAT.md` for detailed instructions on creating your vocabulary sets. Simply:
 
-### `npm run eject`
+1. Read The Hindu & Indian Express editorials during the week
+2. Note down difficult vocabulary words and their meanings
+3. Create a new JSON file in `public/questions/` with date format `YYYY-MM-DD.json`
+4. Add the entry to `public/questions/available-dates.json`
+5. Follow the specified JSON format with your vocabulary words
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Contributing
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Feel free to submit issues and enhancement requests!
