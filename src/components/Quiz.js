@@ -62,14 +62,14 @@ const Quiz = () => {
   }, [selectedDate, currentQuestion, selectedAnswers, showHome, showDateSelector]);
 
   useEffect(() => {
-    if (timeLeft > 0 && !isQuizCompleted && selectedDate) {
+    if (timeLeft > 0 && !isQuizCompleted && selectedDate && questions.length > 0) {
       const timer = setTimeout(() => setTimeLeft(timeLeft - 1), 1000);
       return () => clearTimeout(timer);
-    } else if (timeLeft === 0) {
+    } else if (timeLeft === 0 && questions.length > 0) {
       // Auto-move to next question when time runs out
       handleNext();
     }
-  }, [timeLeft, isQuizCompleted, selectedDate]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [timeLeft, isQuizCompleted, selectedDate, questions.length]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const handleStartQuiz = () => {
     setShowHome(false);
@@ -153,6 +153,7 @@ const Quiz = () => {
   };
 
   const calculateScore = () => {
+    if (!questions || questions.length === 0) return 0;
     let correct = 0;
     questions.forEach((question, index) => {
       if (selectedAnswers[index] === question.correctAnswer) {
@@ -163,6 +164,7 @@ const Quiz = () => {
   };
 
   const getScorePercentage = () => {
+    if (!questions || questions.length === 0) return 0;
     return Math.round((calculateScore() / questions.length) * 100);
   };
 
@@ -257,7 +259,34 @@ const Quiz = () => {
     );
   }
 
+  // Handle case where questions haven't loaded yet or are empty
+  if (!questions || questions.length === 0) {
+    return (
+      <div className="quiz-container">
+        <div className="loading">
+          <h2>No Questions Available</h2>
+          <p>Unable to load questions for the selected date.</p>
+          <button className="restart-btn" onClick={restartQuiz}>
+            Back to Home
+          </button>
+        </div>
+      </div>
+    );
+  }
+
   const currentQ = questions[currentQuestion];
+
+  // Handle case where currentQuestion is out of bounds
+  if (!currentQ) {
+    return (
+      <div className="quiz-container">
+        <div className="loading">
+          <h2>Loading Question...</h2>
+          <div className="spinner"></div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="quiz-container">
@@ -288,10 +317,10 @@ const Quiz = () => {
       </div>
 
       <div className="question-container">
-        <h2 className="question-text">{currentQ?.question}</h2>
+        <h2 className="question-text">{currentQ.question}</h2>
         
         <div className="options-container">
-          {currentQ?.options.map((option, index) => {
+          {currentQ.options && currentQ.options.map((option, index) => {
             const optionLetter = String.fromCharCode(65 + index); // A, B, C, D
             const isSelected = selectedAnswers[currentQuestion] === optionLetter;
             

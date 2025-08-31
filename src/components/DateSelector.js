@@ -19,6 +19,7 @@ const DateSelector = ({ onDateSelect, selectedSection, onBackToSections }) => {
       setAvailableDates(dates);
     } catch (error) {
       console.error('Error loading available dates:', error);
+      setAvailableDates([]);
     } finally {
       setIsLoading(false);
     }
@@ -58,7 +59,7 @@ const DateSelector = ({ onDateSelect, selectedSection, onBackToSections }) => {
         </div>
         
         <div className="date-cards">
-          {availableDates.map((dateInfo) => (
+          {availableDates && availableDates.length > 0 ? availableDates.map((dateInfo) => (
             <div 
               key={dateInfo.date} 
               className="date-card"
@@ -74,7 +75,7 @@ const DateSelector = ({ onDateSelect, selectedSection, onBackToSections }) => {
                 <span className="duration">20 sec/question</span>
               </div>
             </div>
-          ))}
+          )) : null}
         </div>
 
         {availableDates.length === 0 && (

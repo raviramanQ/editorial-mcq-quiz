@@ -1,11 +1,12 @@
 class QuestionService {
   async getAvailableDates(section = 'vocabulary') {
     try {
-      const response = await fetch(`/questions/${section}/available-dates.json`);
+      const response = await fetch(`/questions/available-dates.json`);
       if (!response.ok) {
-        throw new Error('Failed to fetch available dates');
+        throw new Error(`Failed to fetch available dates: ${response.status}`);
       }
-      return await response.json();
+      const data = await response.json();
+      return data[section] || [];
     } catch (error) {
       console.error('Error fetching available dates:', error);
       return [];
