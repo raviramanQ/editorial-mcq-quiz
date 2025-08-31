@@ -2,6 +2,7 @@
   "name": "editorial-mcq-quiz",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://raviramanQ.github.io/editorial-mcq-quiz",
 
   "dependencies": {
     "@testing-library/dom": "^10.4.1",
