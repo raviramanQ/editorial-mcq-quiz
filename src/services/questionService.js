@@ -1,7 +1,7 @@
 class QuestionService {
   async getAvailableDates(section = 'vocabulary') {
     try {
-      const response = await fetch(`/questions/available-dates.json`);
+      const response = await fetch(`${process.env.PUBLIC_URL || ''}/questions/available-dates.json`);
       if (!response.ok) {
         throw new Error(`Failed to fetch available dates: ${response.status}`);
       }
@@ -15,7 +15,7 @@ class QuestionService {
 
   async getQuestionsByDate(date, section = 'vocabulary') {
     try {
-      const response = await fetch(`/questions/${section}/${date}.json`);
+      const response = await fetch(`${process.env.PUBLIC_URL || ''}/questions/${section}/${date}.json`);
       if (!response.ok) {
         throw new Error(`Failed to fetch questions for date: ${date}`);
       }
