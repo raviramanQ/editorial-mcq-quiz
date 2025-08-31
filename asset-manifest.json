@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.146fec8d.css",
-    "main.js": "/static/js/main.8ffc6656.js",
-    "static/js/453.9de7cec8.chunk.js": "/static/js/453.9de7cec8.chunk.js",
-    "index.html": "/index.html",
-    "main.146fec8d.css.map": "/static/css/main.146fec8d.css.map",
-    "main.8ffc6656.js.map": "/static/js/main.8ffc6656.js.map",
-    "453.9de7cec8.chunk.js.map": "/static/js/453.9de7cec8.chunk.js.map"
+    "main.css": "/editorial-mcq-quiz/static/css/main.146fec8d.css",
+    "main.js": "/editorial-mcq-quiz/static/js/main.0328e2f5.js",
+    "static/js/453.9de7cec8.chunk.js": "/editorial-mcq-quiz/static/js/453.9de7cec8.chunk.js",
+    "index.html": "/editorial-mcq-quiz/index.html",
+    "main.146fec8d.css.map": "/editorial-mcq-quiz/static/css/main.146fec8d.css.map",
+    "main.0328e2f5.js.map": "/editorial-mcq-quiz/static/js/main.0328e2f5.js.map",
+    "453.9de7cec8.chunk.js.map": "/editorial-mcq-quiz/static/js/453.9de7cec8.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.146fec8d.css",
-    "static/js/main.8ffc6656.js"
+    "static/js/main.0328e2f5.js"
   ]
 }
