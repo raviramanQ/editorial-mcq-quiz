@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import questionService from '../services/questionService';
 import DateSelector from './DateSelector';
 import VocabularyHome from './SectionSelector';
+import jsPDF from 'jspdf';
 import './Quiz.css';
 
 const Quiz = () => {
@@ -190,6 +191,137 @@ const Quiz = () => {
     }
   };
 
+  const downloadResultsAsPDF = () => {
+    const doc = new jsPDF();
+    const score = calculateScore();
+    const percentage = getScorePercentage();
+    
+    // Helper function to get option text by letter
+    const getOptionText = (letter, question) => {
+      if (!letter || !question.options) return 'Not answered';
+      const optionIndex = letter.charCodeAt(0) - 65;
+      return question.options[optionIndex] || 'Invalid option';
+    };
+
+    // Title
+    doc.setFontSize(20);
+    doc.text('Quiz Results', 20, 20);
+    
+    // Date and score
+    doc.setFontSize(12);
+    doc.text(`Date: ${selectedDate}`, 20, 35);
+    doc.text(`Score: ${score}/${questions.length} (${percentage}%)`, 20, 45);
+    doc.text(`Quiz Type: Vocabulary Practice`, 20, 55);
+    
+    let yPosition = 70;
+    
+    questions.forEach((question, index) => {
+      const userAnswer = selectedAnswers[index];
+      const isCorrect = userAnswer === question.correctAnswer;
+      
+      // Check if we need a new page
+      if (yPosition > 250) {
+        doc.addPage();
+        yPosition = 20;
+      }
+      
+      // Question number and text
+      doc.setFontSize(12);
+      doc.setFont(undefined, 'bold');
+      doc.text(`Question ${index + 1}:`, 20, yPosition);
+      yPosition += 10;
+      
+      doc.setFont(undefined, 'normal');
+      const questionLines = doc.splitTextToSize(question.question, 170);
+      doc.text(questionLines, 20, yPosition);
+      yPosition += questionLines.length * 7;
+      
+      // Your answer
+      doc.setFont(undefined, 'bold');
+      doc.text('Your answer:', 20, yPosition);
+      doc.setFont(undefined, 'normal');
+      const yourAnswerText = userAnswer ? `${userAnswer}. ${getOptionText(userAnswer, question)}` : 'Not answered';
+      const yourAnswerLines = doc.splitTextToSize(yourAnswerText, 150);
+      doc.text(yourAnswerLines, 70, yPosition);
+      yPosition += Math.max(7, yourAnswerLines.length * 7);
+      
+      // Correct answer
+      doc.setFont(undefined, 'bold');
+      doc.text('Correct answer:', 20, yPosition);
+      doc.setFont(undefined, 'normal');
+      const correctAnswerText = `${question.correctAnswer}. ${getOptionText(question.correctAnswer, question)}`;
+      const correctAnswerLines = doc.splitTextToSize(correctAnswerText, 150);
+      doc.text(correctAnswerLines, 70, yPosition);
+      yPosition += Math.max(7, correctAnswerLines.length * 7);
+      
+      // Result indicator
+      doc.setFont(undefined, 'bold');
+      if (isCorrect) {
+        doc.setTextColor(0, 150, 0);
+      } else {
+        doc.setTextColor(200, 0, 0);
+      }
+      doc.text(isCorrect ? '✓ Correct' : '✗ Incorrect', 20, yPosition);
+      doc.setTextColor(0, 0, 0);
+      yPosition += 10;
+      
+      // Explanation
+      doc.setFont(undefined, 'bold');
+      doc.text('Explanation:', 20, yPosition);
+      doc.setFont(undefined, 'normal');
+      const explanationLines = doc.splitTextToSize(question.explanation, 170);
+      doc.text(explanationLines, 20, yPosition + 7);
+      yPosition += explanationLines.length * 7 + 15;
+    });
+    
+    // Save the PDF
+    doc.save(`quiz-results-${selectedDate}.pdf`);
+  };
+
+  const downloadResultsAsText = () => {
+    const score = calculateScore();
+    const percentage = getScorePercentage();
+    
+    // Helper function to get option text by letter
+    const getOptionText = (letter, question) => {
+      if (!letter || !question.options) return 'Not answered';
+      const optionIndex = letter.charCodeAt(0) - 65;
+      return question.options[optionIndex] || 'Invalid option';
+    };
+
+    let textContent = `QUIZ RESULTS\n`;
+    textContent += `============\n\n`;
+    textContent += `Date: ${selectedDate}\n`;
+    textContent += `Quiz Type: Vocabulary Practice\n`;
+    textContent += `Score: ${score}/${questions.length} (${percentage}%)\n\n`;
+    textContent += `DETAILED RESULTS:\n`;
+    textContent += `=================\n\n`;
+    
+    questions.forEach((question, index) => {
+      const userAnswer = selectedAnswers[index];
+      const isCorrect = userAnswer === question.correctAnswer;
+      
+      textContent += `Question ${index + 1}:\n`;
+      textContent += `${question.question}\n\n`;
+      textContent += `Your answer: ${userAnswer ? `${userAnswer}. ${getOptionText(userAnswer, question)}` : 'Not answered'}\n`;
+      textContent += `Correct answer: ${question.correctAnswer}. ${getOptionText(question.correctAnswer, question)}\n`;
+      textContent += `Result: ${isCorrect ? '✓ Correct' : '✗ Incorrect'}\n`;
+      textContent += `Explanation: ${question.explanation}\n\n`;
+      textContent += `${'='.repeat(50)}\n\n`;
+    });
+    
+    // Create and download the file
+    const blob = new Blob([textContent], { type: 'text/plain' });
+    const url = window.URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `quiz-results-${selectedDate}.txt`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    window.URL.revokeObjectURL(url);
+  };
+
   if (showHome) {
     return <VocabularyHome onStartQuiz={handleStartQuiz} />;
   }
@@ -237,18 +369,34 @@ const Quiz = () => {
               const userAnswer = selectedAnswers[index];
               const isCorrect = userAnswer === question.correctAnswer;
               
+              // Helper function to get option text by letter
+              const getOptionText = (letter) => {
+                if (!letter || !question.options) return 'Not answered';
+                const optionIndex = letter.charCodeAt(0) - 65; // Convert A,B,C,D to 0,1,2,3
+                return question.options[optionIndex] || 'Invalid option';
+              };
+              
               return (
                 <div key={index} className={`result-item ${isCorrect ? 'correct' : 'incorrect'}`}>
                   <h4>Question {index + 1}</h4>
                   <p className="question-text">{question.question}</p>
                   <div className="answer-review">
-                    <p><strong>Your answer:</strong> {userAnswer || 'Not answered'}</p>
-                    <p><strong>Correct answer:</strong> {question.correctAnswer}</p>
+                    <p><strong>Your answer:</strong> {userAnswer ? `${userAnswer}. ${getOptionText(userAnswer)}` : 'Not answered'}</p>
+                    <p><strong>Correct answer:</strong> {question.correctAnswer}. {getOptionText(question.correctAnswer)}</p>
                     <p className="explanation"><strong>Explanation:</strong> {question.explanation}</p>
                   </div>
                 </div>
               );
             })}
+          </div>
+          
+          <div className="download-buttons">
+            <button className="download-btn pdf-btn" onClick={downloadResultsAsPDF}>
+              📄 Download as PDF
+            </button>
+            <button className="download-btn text-btn" onClick={downloadResultsAsText}>
+              📝 Download as Text
+            </button>
           </div>
           
           <button className="restart-btn" onClick={restartQuiz}>
