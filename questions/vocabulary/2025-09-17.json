@@ -1,0 +1,272 @@
+{
+    "date": "2025-09-17",
+    "title": "Advanced Vocabulary Practice - Chat Trail",
+    "description": "MCQs to practice meanings of words discussed in the chat",
+    "questions": [
+      {
+        "id": 1,
+        "question": "What does 'Cognizable' mean in law?",
+        "options": [
+          "A case that police cannot register without court approval",
+          "A case that police can register and investigate without court approval",
+          "A case related only to civil disputes",
+          "A case dismissed by the court"
+        ],
+        "correctAnswer": "B",
+        "explanation": "Cognizable means cases where police can register FIR and investigate without prior court approval."
+      },
+      {
+        "id": 2,
+        "question": "What does 'Allurement' mean?",
+        "options": [
+          "Temptation by attractive offers",
+          "A legal punishment",
+          "Strong disagreement",
+          "A natural disaster"
+        ],
+        "correctAnswer": "A",
+        "explanation": "Allurement means temptation, especially by offering rewards, gifts, or promises."
+      },
+      {
+        "id": 3,
+        "question": "What does 'Hails' mean?",
+        "options": [
+          "To greet or praise enthusiastically",
+          "To punish severely",
+          "To hide or cover",
+          "To ignore completely"
+        ],
+        "correctAnswer": "A",
+        "explanation": "Hails means greeting or praising someone with enthusiasm."
+      },
+      {
+        "id": 4,
+        "question": "What is the 'International Monetary Fund (IMF)'?",
+        "options": [
+          "A global health organization",
+          "A UN body that maintains peace",
+          "A global financial institution that supports countries with economic stability",
+          "A trade agreement between nations"
+        ],
+        "correctAnswer": "C",
+        "explanation": "IMF is a global financial institution that provides loans, advice, and support to stabilize economies."
+      },
+      {
+        "id": 5,
+        "question": "What does 'Incarceration' mean?",
+        "options": [
+          "Freedom of movement",
+          "Imprisonment or confinement",
+          "A formal debate",
+          "A type of treaty"
+        ],
+        "correctAnswer": "B",
+        "explanation": "Incarceration means being imprisoned or confined."
+      },
+      {
+        "id": 6,
+        "question": "What does 'Rigor' mean?",
+        "options": [
+          "Strictness or severity",
+          "Joyful celebration",
+          "Softness in approach",
+          "A type of law"
+        ],
+        "correctAnswer": "A",
+        "explanation": "Rigor means strictness, severity, or thoroughness in rules, laws, or procedures."
+      },
+      {
+        "id": 7,
+        "question": "What does 'Rigour' mean?",
+        "options": [
+          "Careless attitude",
+          "Strictness, precision, or thoroughness",
+          "A type of entertainment",
+          "Freedom from responsibility"
+        ],
+        "correctAnswer": "B",
+        "explanation": "Rigour (British spelling) means strictness, exactness, or thoroughness."
+      },
+      {
+        "id": 8,
+        "question": "What does 'Dissent' mean?",
+        "options": [
+          "Agreement with majority opinion",
+          "Disagreement or opposition",
+          "Celebration of unity",
+          "Approval without objection"
+        ],
+        "correctAnswer": "B",
+        "explanation": "Dissent means strong disagreement or opposition to a decision or opinion."
+      },
+      {
+        "id": 9,
+        "question": "What does 'Incitement' mean?",
+        "options": [
+          "Encouraging or provoking unlawful behavior",
+          "Calming a crowd",
+          "Making peace between groups",
+          "Writing laws"
+        ],
+        "correctAnswer": "A",
+        "explanation": "Incitement means encouraging, provoking, or urging people to act, often unlawfully."
+      },
+      {
+        "id": 10,
+        "question": "What does 'Normalisation' mean?",
+        "options": [
+          "Making a situation normal or regular again",
+          "Starting a conflict",
+          "Ignoring issues",
+          "Rejecting agreements"
+        ],
+        "correctAnswer": "A",
+        "explanation": "Normalisation means bringing something back to a normal or standard condition."
+      },
+      {
+        "id": 11,
+        "question": "What does 'Pervading fear' mean?",
+        "options": [
+          "A fear that spreads everywhere",
+          "A fear limited to one place",
+          "A fear that quickly disappears",
+          "A fear that motivates action"
+        ],
+        "correctAnswer": "A",
+        "explanation": "Pervading fear means fear that spreads throughout an area or group of people."
+      },
+      {
+        "id": 12,
+        "question": "What does 'Irony' mean?",
+        "options": [
+          "Saying the opposite of what is meant, often humorously",
+          "Strict punishment",
+          "A type of agreement",
+          "A natural disaster"
+        ],
+        "correctAnswer": "A",
+        "explanation": "Irony means using words to express the opposite of their literal meaning, often humorously or sarcastically."
+      },
+      {
+        "id": 13,
+        "question": "What does 'Sophisticated' mean?",
+        "options": [
+          "Simple and basic",
+          "Highly developed, cultured, or complex",
+          "Lacking refinement",
+          "Unintelligent"
+        ],
+        "correctAnswer": "B",
+        "explanation": "Sophisticated means highly developed, cultured, or complex in design, ideas, or behavior."
+      },
+      {
+        "id": 14,
+        "question": "What does 'Vulnerable' mean?",
+        "options": [
+          "Completely safe",
+          "Easily harmed or attacked",
+          "Strong and unbreakable",
+          "Hidden and protected"
+        ],
+        "correctAnswer": "B",
+        "explanation": "Vulnerable means being open to harm, attack, or damage."
+      },
+      {
+        "id": 15,
+        "question": "What does 'Sustainable' mean?",
+        "options": [
+          "Something that lasts without harm",
+          "Temporary and harmful",
+          "Quickly exhausted",
+          "Artificially created"
+        ],
+        "correctAnswer": "A",
+        "explanation": "Sustainable means capable of lasting without causing harm, especially to the environment or resources."
+      },
+      {
+        "id": 16,
+        "question": "What does 'Endangered' mean?",
+        "options": [
+          "At serious risk of extinction or disappearance",
+          "Widely available and safe",
+          "Hidden and unknown",
+          "Protected forever"
+        ],
+        "correctAnswer": "A",
+        "explanation": "Endangered means at risk of extinction, often used for species or traditions."
+      },
+      {
+        "id": 17,
+        "question": "What does 'Jeopardise' mean?",
+        "options": [
+          "To protect something",
+          "To put something at risk or in danger",
+          "To celebrate success",
+          "To make something permanent"
+        ],
+        "correctAnswer": "B",
+        "explanation": "Jeopardise means to put at risk or endanger something important."
+      },
+      {
+        "id": 18,
+        "question": "What does 'Taming' mean?",
+        "options": [
+          "Making wild things calm or controlled",
+          "Allowing freedom",
+          "Encouraging violence",
+          "Ignoring completely"
+        ],
+        "correctAnswer": "A",
+        "explanation": "Taming means controlling or domesticating something wild, making it calm or manageable."
+      },
+      {
+        "id": 19,
+        "question": "What does 'Ousted' mean?",
+        "options": [
+          "Elected with support",
+          "Removed from power or position",
+          "Promoted to higher office",
+          "Protected by law"
+        ],
+        "correctAnswer": "B",
+        "explanation": "Ousted means removed or forced out of a position, especially in politics."
+      },
+      {
+        "id": 20,
+        "question": "What does 'Nihilism' mean?",
+        "options": [
+          "Belief in higher purpose",
+          "Belief that life and values have no meaning",
+          "Belief in democracy",
+          "Belief in tradition"
+        ],
+        "correctAnswer": "B",
+        "explanation": "Nihilism is the belief that life, values, and institutions have no inherent meaning or truth."
+      },
+      {
+        "id": 21,
+        "question": "What does 'Masquerade' mean?",
+        "options": [
+          "A party with masks or a false show of identity",
+          "An official meeting",
+          "A peaceful protest",
+          "An honest confession"
+        ],
+        "correctAnswer": "A",
+        "explanation": "Masquerade means either a masked party or pretending/hiding true identity under false appearance."
+      },
+      {
+        "id": 22,
+        "question": "What does 'Unconventional' mean?",
+        "options": [
+          "Traditional and normal",
+          "Not following usual ways or traditions",
+          "Strict and rigid",
+          "Completely false"
+        ],
+        "correctAnswer": "B",
+        "explanation": "Unconventional means unusual, different, or not following traditional ways."
+      }
+    ]
+  }
+  
